@@ -1,16 +1,17 @@
 {
   "name": "uniswap-v2-subgraph",
   "version": "1.0.0",
-  "repository": "https://github.com/graphprotocol/uniswap-v2-subgraph",
+  "repository": "https://github.com/graphprotocol/uniswap-v2",
   "license": "GPL-3.0-or-later",
   "scripts": {
     "codegen": "graph codegen --output-dir src/types/",
     "build": "graph build",
-    "deploy": "graph deploy ianlapham/uniswap-v2-rinkeby --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/ --debug"
+    "login": "graph auth --product hosted-service fbb9d5922d844c9485b58e06fb157338",
+    "deploy": "graph deploy --product hosted-service ofojichigozie/uniswap-v2"
   },
   "devDependencies": {
-    "@graphprotocol/graph-cli": "^0.16.0",
-    "@graphprotocol/graph-ts": "^0.16.0",
+    "@graphprotocol/graph-cli": "^0.29.2",
+    "@graphprotocol/graph-ts": "^0.26.0",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
     "eslint": "^6.2.2",
